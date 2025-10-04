@@ -7,64 +7,70 @@ int main()
 {
     int a, b, c, d;
 
-    printf("Please input 4 integers:\n");
-    scanf_s("%d", &a);
-    scanf_s("%d", &b);
-    scanf_s("%d", &c);
-    scanf_s("%d", &d);
-
-    // Maximum, Minimum
-    if ((a > b) && (c > d))
+    do
     {
-        if (a > c)
-            printf("Maximum = %d\n", a);
-        else
-            printf("Maximum = %d\n", c);
+        printf("Please input 4 different integers:\n");
+        scanf_s("%d", &a);
+        scanf_s("%d", &b);
+        scanf_s("%d", &c);
+        scanf_s("%d", &d);
 
-        if (d < b)
-            printf("Minimum = %d\n", d);
-        else
-            printf("Minimum = %d\n", b);
-    }
+        // Maximum, Minimum
+        if ((a > b) && (c > d))
+        {
+            if (a > c)
+                printf("Maximum = %d\n", a);
+            else
+                printf("Maximum = %d\n", c);
 
-    if ((a > b) && (c < d))
-    {
-        if (a > d)
-            printf("Maximum = %d\n", a);
-        else
-            printf("Maximum = %d\n", d);
+            if (d < b)
+                printf("Minimum = %d\n", d);
+            else
+                printf("Minimum = %d\n", b);
+        }
 
-        if (b < c)
-            printf("Minimum = %d\n", b);
-        else
-            printf("Minimum = %d\n", c);
-    }
+        if ((a > b) && (c < d))
+        {
+            if (a > d)
+                printf("Maximum = %d\n", a);
+            else
+                printf("Maximum = %d\n", d);
 
-    if ((a < b) && (c > d))
-    {
-        if (b > c)
-            printf("Maximum = %d\n", b);
-        else
-            printf("Maximum = %d\n", c);
+            if (b < c)
+                printf("Minimum = %d\n", b);
+            else
+                printf("Minimum = %d\n", c);
+        }
 
-        if (a < d)
-            printf("Minimum = %d\n", a);
-        else
-            printf("Minimum = %d\n", d);
-    }
+        if ((a < b) && (c > d))
+        {
+            if (b > c)
+                printf("Maximum = %d\n", b);
+            else
+                printf("Maximum = %d\n", c);
 
-    if ((a < b) && (c < d))
-    {
-        if (b > d)
-            printf("Maximum = %d\n", b);
-        else
-            printf("Maximum = %d\n", d);
+            if (a < d)
+                printf("Minimum = %d\n", a);
+            else
+                printf("Minimum = %d\n", d);
+        }
 
-        if (a < c)
-            printf("Minimum = %d\n", a);
-        else
-            printf("Minimum = %d\n", c);
-    }
+        if ((a < b) && (c < d))
+        {
+            if (b > d)
+                printf("Maximum = %d\n", b);
+            else
+                printf("Maximum = %d\n", d);
+
+            if (a < c)
+                printf("Minimum = %d\n", a);
+            else
+                printf("Minimum = %d\n", c);
+        }
+
+        printf("\n");
+
+    } while (1);
 }
 
 // 執行程式: Ctrl + F5 或 [偵錯] > [啟動但不偵錯] 功能表
